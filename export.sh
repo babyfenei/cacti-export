@@ -89,6 +89,6 @@ done
 cat /tmp/export.list | awk 'NR>1' | while read name id
 do
 if [ "$DAY" = 01 ];then
-wget "${URL}graph_image.php?local_graph_id=${id}&graph_start=${MSTT}&graph_end=${ENT}" -O $(date -d 1 +%Y/%m/month/image/)${name}.jpg
+wget "${URL}graph_xport.php?local_graph_id=${id}&graph_start=${MSTT}&graph_end=${ENT}" -O $(date -d 1 +%Y/%m/month/image/)${name}.jpg
 fi
 done
